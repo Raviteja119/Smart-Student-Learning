@@ -1,0 +1,422 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#f4f7fc;
+  min-height:100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  background:#0f172a;
+  color:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:white;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#38bdf8;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-section{
+  position:relative;
+}
+
+.profile-icon{
+  font-size:35px;
+  cursor:pointer;
+  color:white;
+}
+
+.profile-dropdown{
+  position:absolute;
+  top:50px;
+  right:0;
+  width:250px;
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+  z-index:999;
+}
+
+.profile-dropdown h4{
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+.profile-dropdown p{
+  color:#555;
+  margin-bottom:8px;
+}
+
+.profile-dropdown button{
+  width:100%;
+  padding:10px;
+  background:#ef4444;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.profile-dropdown button:hover{
+  background:#dc2626;
+}
+
+/* =========================
+   DASHBOARD CONTAINER
+========================= */
+
+.dashboard-container,
+.page-container{
+  padding:20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section{
+  height:350px;
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.55),
+  rgba(0,0,0,0.55)
+  ),
+  url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+
+  background-size:cover;
+  background-position:center;
+
+  border-radius:25px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  margin-bottom:30px;
+}
+
+.hero-overlay{
+  text-align:center;
+  color:white;
+}
+
+.hero-overlay h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.hero-overlay p{
+  font-size:20px;
+}
+
+.explore-btn{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* =========================
+   STATS GRID
+========================= */
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass-card{
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+
+  padding:25px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.1);
+
+  transition:0.3s;
+}
+
+.glass-card:hover{
+  transform:translateY(-8px);
+}
+
+.glass-card h2{
+  color:#2563eb;
+  margin:10px 0;
+}
+
+.glass-card h3{
+  margin:15px 0;
+}
+
+.glass-card p{
+  color:#64748b;
+}
+
+/* =========================
+   ICONS
+========================= */
+
+.glass-card svg,
+.card-icon{
+  font-size:50px;
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+/* =========================
+   CARD GRID
+========================= */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:25px;
+
+  margin-top:30px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn{
+  width:100%;
+  margin-top:15px;
+  padding:12px;
+
+  border:none;
+  border-radius:10px;
+
+  background:
+  linear-gradient(
+  135deg,
+  #2563eb,
+  #7c3aed
+  );
+
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.primary-btn:hover{
+  opacity:0.9;
+}
+
+/* =========================
+   DASHBOARD ROW
+========================= */
+
+.dashboard-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-top:30px;
+}
+
+.activity-card{
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:
+  0 4px 15px rgba(0,0,0,0.1);
+}
+
+.activity-card h2{
+  color:#2563eb;
+  margin-bottom:15px;
+}
+
+.activity-card ul{
+  list-style:none;
+}
+
+.activity-card li{
+  padding:12px;
+  border-bottom:1px solid #eee;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-container{
+  width:100%;
+  height:10px;
+  background:#e2e8f0;
+  border-radius:20px;
+  margin:15px 0;
+}
+
+.progress-bar{
+  height:100%;
+  border-radius:20px;
+  background:
+  linear-gradient(
+  90deg,
+  #2563eb,
+  #7c3aed
+  );
+}
+
+/* =========================
+   AUTH PAGES
+========================= */
+
+.auth-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+  linear-gradient(
+  135deg,
+  #2563eb,
+  #7c3aed
+  );
+}
+
+.auth-card{
+  width:420px;
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.2);
+}
+
+.auth-card h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.auth-card input,
+.auth-card select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+.auth-card button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+}
+
+.auth-link{
+  margin-top:15px;
+  text-align:center;
+}
+
+.auth-link a{
+  text-decoration:none;
+  color:#2563eb;
+  font-weight:600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-overlay h1{
+    font-size:32px;
+  }
+
+  .hero-overlay p{
+    font-size:16px;
+  }
+
+  .dashboard-row{
+    grid-template-columns:1fr;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr;
+  }
+}
