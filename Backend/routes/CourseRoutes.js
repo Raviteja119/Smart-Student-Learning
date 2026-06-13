@@ -6,10 +6,10 @@ const {
   createCourse,
   getCourses,
   enrollCourse
-} = require("../controllers/courseController");
+} = require("../controllers/CourseController");
 
-const auth = require("../middleware/authMiddleware");
-const role = require("../middleware/roleMiddleware");
+const auth = require("../middleware/AuthMiddleware");
+const role = require("../middleware/RoleMiddleware");
 
 router.post(
   "/",
