@@ -16,11 +16,11 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api/auth", require("./routes/authRoutes"));
-app.use("/api/courses", require("./routes/courseRoutes"));
-app.use("/api/assignments", require("./routes/assignmentRoutes"));
-app.use("/api/jobs", require("./routes/jobRoutes"));
-app.use("/api/dashboard", require("./routes/dashboardRoutes"));
+app.use("/api/auth", require("./routes/AuthRoutes"));
+app.use("/api/courses", require("./routes/CourseRoutes"));
+app.use("/api/assignments", require("./routes/AssignmentRoutes"));
+app.use("/api/jobs", require("./routes/JobRoutes"));
+app.use("/api/dashboard", require("./routes/DashboardRoutes"));
 
 // Test Route
 app.get("/", (req, res) => {
