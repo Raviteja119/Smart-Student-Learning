@@ -2,14 +2,14 @@ const express = require("express");
 
 const router = express.Router();
 
-const auth = require("../middleware/authMiddleware");
-const role = require("../middleware/roleMiddleware");
+const auth = require("../middleware/AuthMiddleware");
+const role = require("../middleware/RoleMiddleware");
 
 const {
   createJob,
   getJobs,
   applyJob
-} = require("../controllers/jobController");
+} = require("../controllers/JobController");
 
 router.post(
   "/",
